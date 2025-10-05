@@ -19,6 +19,7 @@ background:#F1F8F6;
 header
 {
 border:1px black solid;
+border-radius: 20px;
 background:#A8D5BA;
 margin:auto;
 text-align:center;
@@ -26,22 +27,55 @@ padding:10px;
 margin-top:10px;
 box-shadow:10px 10px 10px gray;
 }
+ nav {
+      background: #A8D5BA;
+      width: 20%;
+      height: auto;
+      margin:  auto;
+      margin-left: equal;
+      margin-right: equal;
+      padding: 10px 0;
+      border-radius: 8px;
+      box-shadow:10px 10px 10px gray;
+      border:1px black solid;
+       transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    nav ol {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav ol li {
+      margin: 5px 15px;
+    }
+   div nav ol li :hover
+    {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.4);
+    }
 
 </style>
 <body>
 <br/>
 <div>
 <nav>
-<ol>
+<ul>
 
-<li><a href="menu.html">project 1</a></li>
+<li><a href="menu.html">project 1</a></li> 
 
-<li><a href="web gallery.html">Practice Homepage </a></li>
+<li><a href="web gallery.html">gallery </a></li>
 
-<li><a href="bookmark.html">project 2</a></li>
+<li><a href="bookmark.html">policy</a></li>
+
+<li><a href="banner.html">banner</a></li>
+
+<li><a href="table.html">table</a></li>
 
 
-</ol>
+</ul>
 
 </nav>
 
