@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>banner</title>
+</head>
+<style>
+     @keyframes slider {
+      0%   { left: 0%; }
+      20%  { left: 0%; }
+      25%  { left: -100%; }
+      45%  { left: -100%; }
+      50%  { left: -200%; }
+      70%  { left: -200%; }
+      75%  { left: -300%; }
+      95%  { left: -300%; }
+      100% { left: -400%; }
+    }
+     body {
+      background: linear-gradient(to right, #B7E4C7, #74C69D);
+    }
+    #top
+    {
+        overflow: hidden;
+        width: 100%;
+        height: 600px;
+       position: relative;
+    }
+      header {
+      width: 500%; 
+      height: 900px;
+      display: flex;
+      position: relative;
+      left: 0;
+      animation: slider 8s infinite;
+      }
+       .pic {
+      width: 20%; 
+      height: 100%;
+      object-fit: cover;
+    }
+    #bottom
+    {
+        width: 98%;
+        margin: auto;
+        text-align:justify;
+        font-size: medium;
+        box-sizing: border-box;
+        padding: 10px;
+        font-family: roboto, sans-serif;
+    } 
+    h1{
+        font-family: playfair display, serif;
+    }
+</style>
+<body>
+    <div id="top">
+        <header>
+            <img src="images/t1.jpg" class="pic">
+            <img src="images/t2.jpg" class="pic">
+            <img src="images/t3.jpg" class="pic">
+            <img src="images/t4.jpg" class="pic">
+            <img src="images/t5.jpg" class="pic">
+            <img src="images/t6.jpg" class="pic">
+    </header>
+    </div>
+    <div id="bottom">
+        <h1> Tiger</h1>
+        <p> 
+            Tigers are top predators in the wild. But like most wildlife, the Bengal Tiger faces several threats. Some of the major factors that endangers this majestic subspecies include – </br>
+
+<h3>Habitat loss and fragmentation:</h3> With their territories shrinking because of urbanisation, tigers are often forced into competition with other predators for food and survival, which threatens their way of life.</br>
+<h3> conflict:</h3> With the loss of their native habitats, tigers are now closer to human settlements. This causes frequent encounters between the two, which often conclude with harm caused to both human and animal.
+<h3>Depletion of prey base:</h3> As enormous cats that require a sizable home range and plenty of prey, tigers sometimes rely on readily available livestock and stray animals due to a fall in prey populations. Since tigers are found preying on their cattle, locals in the vicinity often resort to retaliatory killing.
+<h3> poaching and trade of body parts:</h3> Tigers are captured or killed for their bones, claws, and other body parts that are frequently sold in Southeast Asian markets. This illegal trade, in turn, is fuelled by the demand for live tigers and tiger-based products in the West, leading to a transnational poaching ring.
+<h3>Tourism industry:</h3> Tigers are an attraction that benefits the tourism industry. Sadly, tigers used for entertainment purposes are facing traumatic lives that include overbreeding, mother-cub separation, and declawing. Tigers in captivity are also known to be drugged often.
+        </p>
+    </div>
+</body>
+</html>
