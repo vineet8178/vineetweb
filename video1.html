@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        width: 100%;
+        height: 700px;
+        background: purple;
+        margin: auto;
+        margin-bottom: 40px;
+        position: fixed;
+        top: 10px;
+        overflow-y: scroll;
+
+    }
+    main p{
+        text-align: justify;
+        padding: 40px;
+        background: white;
+        border-bottom: 1px black solid;
+    }
+    header video
+    {
+        width: 100%;
+    
+    }
+    #bannertext{
+        position:fixed;
+        font-size: 100px;
+        font-family: arial black;
+        top:140px;
+        left:20%;
+        color:white;
+        opacity: 1;
+        text-shadow: 5px 5px 5px black;
+        z-index: 1000;
+    }
+
+    @keyframes run
+    {
+        from{transform: rotate(0deg);}
+        to{transform: rotate(360deg);}
+
+    }
+
+    #loader
+    {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 320px;
+        left: 600px;
+        border-top: 10px red ridge;
+        border-left: 10px red ridge;
+        border-radius: 100px;
+        animation: run 1s linear infinite;
+    }
+</style>
+<body>
+    <div id="loader"></div>
+    <div id="bannertext">WORLD FROM TOP</div>
+    <div style="height: 800px;"></div>
+    <video autoplay loop>
+    <header>
+        <source src="animation/video.mp4" >
+        no support for video:-
+    </video>
+    </header>
+    <main>
+        <p>
+            There is a small garden near my house. It is full of beautiful flowers of many colors. Every morning when the sun rises, the flowers bloom and spread a sweet fragrance all around. The most wonderful sight in the garden is the butterflies flying from flower to flower.
+The butterflies are very pretty and colorful. Some are yellow, some blue, and some have red and orange wings. They look like flying flowers dancing in the air. They suck nectar from the flowers and make the garden look lively and cheerful.
+Children love to watch butterflies. Sometimes they try to catch them, but butterflies are very light and fly away quickly. Their gentle movements make the garden more beautiful and full of life.
+Butterflies are not only lovely to look at, but they are also important for nature. They help flowers grow by carrying pollen from one flower to another.
+We should always plant more flowers and trees so that butterflies can come and make our gardens colorful and happy.
+        </p>
+    </main>
+</body>
+</html>
