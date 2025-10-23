@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @keyframes blink
+    {
+        from{opacity: 1;}
+        to{opacity: 0;}
+    }
+    #logo
+    {
+        margin: 10px;
+        font-size: 50px;
+        font-family: montserrat;
+        color: #374151;
+         //text-align: center;
+
+    }
+    #main
+    {
+        width: 70%;
+        margin: auto;
+        text-align: center;
+        //animation: blink 1.5s linear infinite alternate;
+    }
+    #menu
+    {
+      float: left;
+    }
+    #map
+    {
+       margin: 10px;
+        font-size: 50px;
+        font-family: montserrat;
+        color: #374151;
+         //text-align: center;  
+    }
+    #map1
+    {
+       
+        width: 70%;
+        margin: auto;
+        text-align: center; 
+    }
+</style>
+<body>
+    
+    <div id="logo">IFRAME</div>
+    <div id="menu">
+<ol>
+    <li><a href="index.html" target="myframe">Home</a></li>
+    <li><a href="list.html" target="myframe">List</a></li>
+    <li><a href="animate.html" target="myframe">Box</a></li>
+    <li><a href="audio.html" target="myframe">Audio</a></li>
+    <li><a href="Web gallery.html" target="myframe">Photo</a></li>
+
+</ol>  
+    </div>
+    
+    <div id="main">
+        <iframe name="myframe" src="list.html" style="width: 100%;height: 400px;"
+        frameborder="0">
+    
+        your browser does not support ... Iframe .....
+    </iframe>
+    </div>
+     <div id="map">Map</div>
+      <div id="map1">
+        <iframe name="myframe" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d316904.39379616675!2d77.47770152673276!3d28.649777276012387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1761055254131!5m2!1sen!2sin" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+</body>
+</html>
