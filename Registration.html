@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body
+    {
+        background-color: #A8D5BA;
+    }
+    header
+    {
+        background-color: #374151;
+        color: white;
+        text-align: center;
+        font-size: 1.5rem;
+        margin-top: 5px;
+        border-radius: 10px;
+    }
+    footer
+    {
+        background-color: #374151;
+        color: white;
+        text-align: center;
+        font-size: 2rem; 
+        margin-top: 70px;
+         border-radius: 10px;
+    }
+    #main
+{
+    width:40%;
+     height: 100%;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 10px 10px 10px black;
+    border-radius: 30px;
+    margin-top: 100px;
+    background-color: white;
+    
+}
+table
+{
+    margin: auto;
+    width: 100%;
+}
+#button
+{
+      width: 100%;
+      color: white;
+      font-size: 1.1rem;
+      margin-left: 150%;
+      padding: 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
+      
+}
+ #button:hover {
+      background-color:  #A8D5BA;
+    }
+#but
+{
+      width: 100%;
+      color: white;
+      font-size: 1.1rem;
+       margin-left: 290%;
+      padding: 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color0.3s ease ;
+    
+      
+}
+ #but:hover {
+      background-color:  #A8D5BA;
+
+    }
+ td label {
+      font-weight: bold;
+      font-size: larger;
+      color:#374151;
+    }
+     
+</style>
+<body>
+    <header>
+      <h1>Wear House</h1> 
+    </header>
+    <div id="main">
+
+    <form action="http://tataplay/user/login.php" method="get">
+
+    <table border="0" cellpadding="10">
+        <caption><h1>Registration</h1></caption>
+
+        <tr>
+           <td> <label for="name">Name</label></td> 
+           <td><input id="name" type="text" required placeholder="Type Name here" title="Type your name"></td>
+        </tr>
+        <tr><td><label for="age">Age</label></td>
+            <td><input id="age" type="number"
+             min="18" max="30" placeholder="Type Age between 18-30" title="Type Age"></td>
+        </tr>
+        <tr>
+            <td><label for="dob">DOB</label></td>
+            <td>  <input id="dob" type="date"></td>
+        </tr>
+        <tr>
+            <td><label for="time">Time</label></td>
+            <td> <input type="time"></td>
+        </tr>
+        <tr>
+          <td><label for="mess">About you</label></td>   <td><textarea
+        cols="40" rows="10" id="mes">Type About your work details</textarea></td>
+        </tr>
+        <tr>
+            <td><label for="gen">Gender</label></td>
+
+            <td>
+                Male<input name="gen" type="radio" value="male">
+                Female<input name="gen" checked type="radio" value="Female">
+                Others<input name="gen" type="radio" value="Other">
+            </td>
+        </tr>
+        <tr>
+        <td>
+            <label>Hobby</label>
+        </td>
+        <td>
+        Reading<input type="checkbox" value="Reading">
+        Dancing<input type="checkbox" value="Writing">
+        Singing<input type="checkbox" value="Singing"></td>
+        </tr>
+        <tr>
+        <td>
+            <div id="button">
+            <input type="submit" value="Register">
+            
+        </td>
+        </tr>
+        <tr>
+         <td>
+            <div id="but">
+            <input type="reset">
+        </td>
+    </tr>
+</tr>
+    </table>
+</form>
+</div>
+</div>
+</div>
+ <footer>
+    Thank you
+  </footer>
+    
+</body>
+</html>
