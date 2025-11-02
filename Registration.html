@@ -46,6 +46,7 @@ table
     margin: auto;
     width: 100%;
 }
+
 #button
 {
       width: 100%;
@@ -59,26 +60,21 @@ table
       margin-top: 10px;
       
 }
- #button:hover {
+// #button:hover {
       background-color:  #A8D5BA;
     }
-#but
-{
-      width: 100%;
-      color: white;
-      font-size: 1.1rem;
-       margin-left: 290%;
-      padding: 10px;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background-color0.3s ease ;
-    
-      
-}
- #but:hover {
-      background-color:  #A8D5BA;
 
-    }
+
+    input[type="text"],input[type="email"],input[type="number"],textarea{padding: 10px;border-radius: 10px;width: 80%;
+    border: 1 solid black;}
+
+    input,select,list,input[type="time"],input[type="color"],input[type="date"]
+    {padding: 10px;border-radius: 10px;width: 90%;border: 1px black solid;}
+
+    input[type="submit"]{background:#A8D5BA ;margin:10px;color: white;}
+    input[type="reset"]{background:#A8D5BA ;margin:10px;color: white;}
+
+
  td label {
       font-weight: bold;
       font-size: larger;
@@ -99,14 +95,18 @@ table
 
         <tr>
            <td> <label for="name">Name</label></td> 
-           <td><input id="name" type="text" required placeholder="Type Name here" title="Type your name"></td>
+           <td><span><input id="name" type="text" required placeholder="Type Name here" title="Type your name"></td>
         </tr>
-        <tr><td><label for="age">Age</label></td>
+
+        <tr><td><span><label for="age">Age</label></td>
             <td><input id="age" type="number"
-             min="18" max="30" placeholder="Type Age between 18-30" title="Type Age"></td>
+             min="18" max="30" placeholder="Type Age between 18-30" title="Type Age"></span></td>
         </tr>
-        <tr>
-            <td><label for="dob">DOB</label></td>
+         <tr><td><label for="email">Email</label></td>
+            <td>  <input id="email" type="email"></td>
+        </tr>
+
+        <tr><td><label for="dob">DOB</label></td>
             <td>  <input id="dob" type="date"></td>
         </tr>
         <tr>
@@ -126,6 +126,35 @@ table
                 Others<input name="gen" type="radio" value="Other">
             </td>
         </tr>
+        <tr><td><label for="City">City</label></td>
+        <td>
+        <select size="1">
+            <option value="Delhi">Delhi</option>
+            <option value="UP">UP</option>
+            <option value="Madhya Pradesh">Madhya Pradesh</option>
+            <option value="Banglore">Banglore</option>
+            <option value="Channai">Channai</option>
+            <option value="Jhammu & Kashmir">Jhammu & Kashmir</option>
+            </select>
+        </td>
+    </tr>
+        <tr><td><label for="country">country</label></td>
+            <td>
+        <input list="country"  name="country">        
+          
+        <datalist id="country">
+         <option value="Usa">
+         <option value="Australia">
+         <option value="Uk">
+         <option value="India">
+         <option value="Japan">
+         <option value="Spain">
+         <option value="Nepal">
+         <option value="Chaina">
+         <option value="Itly">   
+         </datalist>
+           </td>        
+        </tr>
         <tr>
         <td>
             <label>Hobby</label>
@@ -135,19 +164,22 @@ table
         Dancing<input type="checkbox" value="Writing">
         Singing<input type="checkbox" value="Singing"></td>
         </tr>
+
+        <tr><td><label for="colorchoice">color</label></td>
+        <td> <input id="colorchoice" type="color"></td>
+    </tr>
+
+      <tr><td><label for="Upload">Upload Files</label></td>
+        <td> <input id="Upload" type="file"></td></tr>
         <tr>
         <td>
             <div id="button">
             <input type="submit" value="Register">
+             <input type="reset">
             
         </td>
         </tr>
-        <tr>
-         <td>
-            <div id="but">
-            <input type="reset">
-        </td>
-    </tr>
+      
 </tr>
     </table>
 </form>

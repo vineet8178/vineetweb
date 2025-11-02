@@ -1,109 +1,132 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Practice Pages</title>
-<a href="index.html">Home</a>
 
-</head>
-<header>
-<h1><font color="#374151"> Practice Work</h1>
-</header>
-
-
-<style>
-body
-{
-background:#F1F8F6;
-}
-header
-{
-border:1px black solid;
-border-radius: 20px;
-background:#A8D5BA;
-margin:auto;
-text-align:center;
-padding:10px;
-margin-top:10px;
-box-shadow:10px 10px 10px gray;
-}
- nav {
-      background: #A8D5BA;
-      width: 20%;
-      height: auto;
-      margin:  auto;
-      margin-left: equal;
-      margin-right: equal;
-      margin-top:30px;
-      padding: 10px 0;
-      border-radius: 8px;
-      box-shadow:10px 10px 10px gray;
-      border:1px black solid;
-       transition: transform 0.3s ease, box-shadow 0.3s ease;
+  <style>
+    body {
+      background: #F1F8F6;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
     }
 
-    nav ol {
+    /* Header styling */
+    header {
+      border: 1px solid black;
+      border-radius: 20px;
+      background: #A8D5BA;
+      margin: 20px auto;
+      text-align: center;
+      padding: 15px;
+      width: 80%;
+      box-shadow: 10px 10px 10px gray;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    header:hover {
+      transform: scale(1.02);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    header h1 {
+      color: #374151;
+      margin: 0;
+    }
+
+    /* Navigation area */
+    nav {
+      background: #A8D5BA;
+      width: 80%;
+      margin: 30px auto;
+      padding: 15px 0;
+      border-radius: 10px;
+      box-shadow: 10px 10px 10px gray;
+      border: 1px solid black;
+    }
+
+    nav ul {
       list-style: none;
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
     }
 
-    nav ol li {
-      margin: 5px 15px;
-    }
-   div nav ol li :hover
-    {
-      transform: translateY(-10px);
-      box-shadow: 0 12px 20px rgba(0,0,0,0.4);
+    nav ul li {
+      margin: 10px 15px;
     }
 
-</style>
+    /* Button style links */
+    nav ul li a {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      background: #D1EED6;
+      padding: 10px 20px;
+      border-radius: 8px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      transition: all 0.4s ease;
+      display: inline-block;
+    }
+
+    /* Hover animation */
+    nav ul li a:hover {
+      background: #56b27b;
+      color: white;
+      transform: translateY(-6px) scale(1.05);
+      box-shadow: 0 0 20px #8ae6b0, 0 0 30px #6fd49c;
+    }
+
+    /* Home link */
+    .home-link {
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+      font-weight: bold;
+      color: #1e3a8a;
+      text-decoration: none;
+      font-size: 18px;
+      transition: all 0.3s ease;
+    }
+
+    .home-link:hover {
+      color: #2563eb;
+      text-decoration: underline;
+      transform: scale(1.1);
+    }
+
+  </style>
+</head>
+
 <body>
-<br/>
-<div>
-<nav>
-<ul>
 
-<li><a href="Menu.html">Project 1</a></li>
+  <a class="home-link" href="index.html">🏠 Home</a>
 
-<li><a href="list.html">List</a></li>
+  <header>
+    <h1>Practice Work</h1>
+  </header>
 
-<li><a href="menu in.html">Menu</a></li> 
-
-<li><a href="Web gallery.html">Gallery </a></li>
-
-<li><a href="Bookmark.html">Policy</a></li>
-
-<li><a href="Tables.html">Table</a></li>
-
-<li><a href="animate.html">Animation</a></li>
-
-<li><a href="audio.html">Audio animation</a></li>
-
-<li><a href="video1.html">Video animation</a></li>
-
-<li><a href="iframe.html">Iframe</a></li>
-
-<li><a href="form.html">Form</a></li>
-
-<li><a href="banner2.html">News</a></li>
-
-<li><a href="Registration.html">Form</a></li>
-
-
-
-</ul>
-
-</nav>
-
-
-
-
-
-</div>
+  <nav>
+    <ul>
+      <li><a href="Menu.html">Project 1</a></li>
+      <li><a href="list.html">List</a></li>
+      <li><a href="menu in.html">Menu</a></li>
+      <li><a href="Web gallery.html">Gallery</a></li>
+      <li><a href="Bookmark.html">Policy</a></li>
+      <li><a href="Tables.html">Table</a></li>
+      <li><a href="animate.html">Animation</a></li>
+      <li><a href="audio.html">Audio Animation</a></li>
+      <li><a href="video1.html">Video Animation</a></li>
+      <li><a href="iframe.html">Iframe</a></li>
+      <li><a href="form.html">Form</a></li>
+      <li><a href="banner2.html">News</a></li>
+      <li><a href="Registration.html">Registration</a></li>
+    </ul>
+  </nav>
 
 </body>
-
 </html>
-
