@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #box
+    {
+        width: 200px;
+        height: 200px;
+        background: red;
+        box-shadow: 10px 10px 10px  grey;
+    }
+    .mystyle
+    {
+        background: red;
+        color: yellow;
+        display: inline;
+        font-size:20px;
+        padding: 5px;
+        box-shadow: 10px 10px 10px grey;
+        position: absolute;
+        top: 100px;
+        left: 40px;
+        transition: 0.50s;
+    
+    }
+
+</style>
+<body>
+    <div id="box">Box</div>
+    <div id="tooltip"></div>
+    <script>
+        var b = document.getElementById("box")
+        var t = document.getElementById("tooltip")
+
+
+        b.style.background="green"
+        b.style.width="40"
+        b.style.background="url(images/1.jpg)"
+        b.style.transition="0.50s"
+
+        b.oneclick=function()
+        {
+          b.style.background="url(images/2.jpg)"
+          b.style.backgroundSize="cover"
+          b.style.borderRadius="100px"
+        }
+
+        b.onmouseover = function()
+        {
+            b.style.cursor="pointer"
+            t.innerHTML="click to change a picture"
+            t.className="mystyle"
+            document.title="click to change pitcure"
+        }
+        b.onmouseout = function()
+        {
+            document.title=""
+            b.style.background="url(images/1.jpg)"
+            t.innerHTML=""
+            t.className=""
+        }
+        document.title="Ready"
+    </script>
+</body>
+</html>
