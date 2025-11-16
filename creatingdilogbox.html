@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .add1style
+    {
+        width: 600px;
+        height: 650px;
+        border:1px black solid;
+        box-shadow: 10px 10px 10px grey;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        text-align: center;
+        overflow:hidden;
+    }
+</style>
+<body>
+    <div id="add1"></div>
+    <script>
+        /*
+        creating custom Dilog box for Displaying Digital Content
+        */
+       //var add = document.getElementById("add1")
+       var add = document.createElement("div")
+       document.body.appendChild(add)
+
+
+       function showadd()
+       {
+        add.className="add1style"
+        add.style.top="20%"
+        add.style.left="30%"
+        add.innerHTML="<button onClick='closedloge()' style='cursor:pointer;margin-left:100%;border-radius:100px;height:30px;margin-top:1px;'></button>"
+        add.innerHTML+="<h3>Playing Game</h3> <hr/>"
+        add.innerHTML+="<img src='images/Game.gif' >"
+       }
+
+       function closediloge()
+       {
+        document.body.removeChild(add)
+       }
+
+
+       setTimeout("showadd()",2000)
+
+       setTimeout("document.body.removechild(add)",6000)
+
+       document.title="ready"
+
+       
+    </script>
+</body>
+</html>
