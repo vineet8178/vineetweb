@@ -17,27 +17,50 @@
         left: 0px;
         text-align: center;
         overflow:hidden;
+        text-align: center;
     }
 </style>
 <body>
     <div id="add1"></div>
+    <audio id="s">
+        <source src="s1.wav" type="audio/wav">
+    </audio>
+
+
     <script>
         /*
         creating custom Dilog box for Displaying Digital Content
         */
        //var add = document.getElementById("add1")
        var add = document.createElement("div")
+       var add = document.createElement("S")
+       //var addpic
        document.body.appendChild(add)
-
+       var mx = 0
+       var my = 0
 
        function showadd()
        {
         add.className="add1style"
-        add.style.top="20%"
-        add.style.left="30%"
-        add.innerHTML="<button onClick='closedloge()' style='cursor:pointer;margin-left:100%;border-radius:100px;height:30px;margin-top:1px;'></button>"
-        add.innerHTML+="<h3>Playing Game</h3> <hr/>"
-        add.innerHTML+="<img src='images/Game.gif' >"
+
+
+        add.innerHTML="<button onClick='closedloge()' style='cursor:pointer;margin-left:100%;border-radius:100px;height:30px;margin-top:1px;'>❌</button>"
+        add.innerHTML+= "<h3>Playing Game</h3> <hr/>"
+        add.innerHTML+= "<img id='addpic' src='images/Game.gif' >"
+        s.play()
+
+        add.style.top = my+"px"
+        add.style.left = my+"px"
+
+
+        addpic = document.getElementById("addpic")
+        addpic.onclick = function()
+        {
+
+            // redirection
+            location.href="https://supercell.com/en/games/clashofclans/"
+        }
+
        }
 
        function closediloge()
@@ -46,9 +69,19 @@
        }
 
 
-       setTimeout("showadd()",2000)
+       setTimeout("showadd()",4000)
 
-       setTimeout("document.body.removechild(add)",6000)
+       setTimeout("document.body.removechild(add)",8000)
+
+       function f1(event)
+       {
+        mx = event.pageX
+         my = event.pageY
+         //document.title = math.round()*500)
+         document.title = "x ="+event.pagex+"Y ="+event.pageY
+       }
+
+       document.addEventListener("mousemove",f1)
 
        document.title="ready"
 

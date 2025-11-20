@@ -29,7 +29,7 @@
     }
 
 </style>
-<body>
+<body onload="show()">
     <div id="box">Box</div>
     <div id="tooltip"></div>
     <script>
@@ -63,6 +63,19 @@
             t.innerHTML=""
             t.className=""
         }
+        function redirect()
+        {
+            location.href="index.html"
+        }
+        function show()
+        {
+            alert("you will be redirected in our site...since this site is under construction")
+        }
+
+        setTimeout("redirect()",10000
+
+        
+        )
         document.title="Ready"
     </script>
 </body>
