@@ -10,82 +10,80 @@
     {
         width: 600px;
         height: 650px;
-        border:1px black solid;
-        box-shadow: 10px 10px 10px grey;
+        /* background: red; */
+        border: 1px black solid;
+        box-shadow: 10px 10px 10px gray;
         position: absolute;
         top: 0px;
         left: 0px;
         text-align: center;
         overflow:hidden;
-        text-align: center;
     }
 </style>
 <body>
     <div id="add1"></div>
     <audio id="s">
-        <source src="s1.wav" type="audio/wav">
+        <source src="audio/a2.wav" type="audio/wav">
+
     </audio>
-
-
     <script>
-        /*
-        creating custom Dilog box for Displaying Digital Content
-        */
-       //var add = document.getElementById("add1")
-       var add = document.createElement("div")
-       var add = document.createElement("S")
-       //var addpic
-       document.body.appendChild(add)
-       var mx = 0
-       var my = 0
+        // Creating Custom Dilog box for Displaying Digital Content 
 
-       function showadd()
-       {
-        add.className="add1style"
+        // var add = document.getElementById("add1")
+        var add = document. createElement("div")
+        var s = document.getElementById("s")
+        //var addpic
+        document.body.appendChild(add)
+        var mx = 0
+        var my = 0
 
 
-        add.innerHTML="<button onClick='closedloge()' style='cursor:pointer;margin-left:100%;border-radius:100px;height:30px;margin-top:1px;'>❌</button>"
-        add.innerHTML+= "<h3>Playing Game</h3> <hr/>"
-        add.innerHTML+= "<img id='addpic' src='images/Game.gif' >"
-        s.play()
-
-        add.style.top = my+"px"
-        add.style.left = my+"px"
-
-
-        addpic = document.getElementById("addpic")
-        addpic.onclick = function()
+        function showadd()
         {
+            add.className="add1style"
+            // add.style.top="20%"
+            // add.style.left="30%"
+            add.innerHTML="<button onclick='closediloge()' style='cursor:pointer;margin-left:90%;border-radius:100px;height:30px;margin-top:1px'>close</button>"
+            add.innerHTML+="<h3>Gaming Box</h3> <hr/>"
+            add.innerHTML+="<img id='addpic' src='images/Game.gif'>"
+            s.play()
 
-            // redirection
-            location.href="https://supercell.com/en/games/clashofclans/"
+            add.style.top = my+"px"
+            add.style.left = mx+"px"
+
+            addpic = document.getElementById("addpic")
+            addpic.onclick = function()
+            {
+                //Redirection 
+                location.href="https://supercell.com/en/games/clashofclans/"
+            }
+
         }
 
-       }
+        function closediloge()
+        {
+            document.body.removeChild(add)
+        }
 
-       function closediloge()
-       {
-        document.body.removeChild(add)
-       }
+        setTimeout("showadd()",3000)
+        setTimeout("document.body.removeChild(add)",8000)
 
 
-       setTimeout("showadd()",4000)
+        function f1(event)
+        {
+            mx = event.pageX
+            my = event.pageY
 
-       setTimeout("document.body.removechild(add)",8000)
+            document.title = Math.round(Math.random()*500)
+            document.title = " x = "+event.pageX+"Y = "+event.pageY
+        }
 
-       function f1(event)
-       {
-        mx = event.pageX
-         my = event.pageY
-         //document.title = math.round()*500)
-         document.title = "x ="+event.pagex+"Y ="+event.pageY
-       }
+        document.addEventListener("mousemove",f1)
 
-       document.addEventListener("mousemove",f1)
 
-       document.title="ready"
+        document.title="Ready"
 
-       
     </script>
+    
 </body>
 </html>
