@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .add1style
+    {
+        width: 600px;
+        height: 650px;
+        /* background: red; */
+        border: 1px black solid;
+        box-shadow: 10px 10px 10px gray;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        text-align: center;
+        overflow:hidden;
+    }
+</style>
+<body>
+    <div id="add1"></div>
+    <audio id="s">
+        <source src="audio/a2.wav" type="audio/wav">
+
+    </audio>
+    <script>
+        // Creating Custom Dilog box for Displaying Digital Content 
+
+        // var add = document.getElementById("add1")
+        var add = document. createElement("div")
+        var s = document.getElementById("s")
+        //var addpic
+        document.body.appendChild(add)
+        var mx = 0
+        var my = 0
+
+
+        function showadd()
+        {
+            add.className="add1style"
+            // add.style.top="20%"
+            // add.style.left="30%"
+            add.innerHTML="<button onclick='closediloge()' style='cursor:pointer;margin-left:90%;border-radius:100px;height:30px;margin-top:1px'>close</button>"
+            add.innerHTML+="<h3>Gaming Box</h3> <hr/>"
+            add.innerHTML+="<img id='addpic' src='images/Game.gif'>"
+            s.play()
+
+            add.style.top = my+"px"
+            add.style.left = mx+"px"
+
+            addpic = document.getElementById("addpic")
+            addpic.onclick = function()
+            {
+                //Redirection 
+                location.href="https://supercell.com/en/games/clashofclans/"
+            }
+
+        }
+
+        function closediloge()
+        {
+            document.body.removeChild(add)
+        }
+
+        setTimeout("showadd()",3000)
+        setTimeout("document.body.removeChild(add)",8000)
+
+
+        function f1(event)
+        {
+            mx = event.pageX
+            my = event.pageY
+
+            document.title = Math.round(Math.random()*500)
+            document.title = " x = "+event.pageX+"Y = "+event.pageY
+        }
+
+        document.addEventListener("mousemove",f1)
+
+
+        document.title="Ready"
+
+    </script>
+    
+</body>
+</html>
