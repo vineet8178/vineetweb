@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #main{
+        width: 200px;
+        margin: 30px;
+        box-shadow: 10px 10px 10px grey;
+    }
+    #main button
+    {
+        width: 40px;
+        height: 40px;
+        padding: 2px;
+        border-radius:30px;
+        box-shadow: 5px 5px 5px grey;
+    }
+
+</style>
+<body>
+    
+    <div id="main">
+        <script>
+            var a = 0
+            var r = 0
+            var g = 0
+            var b = 0
+
+               while(a<=29)
+        {
+            r = Math.round(Math.random()*255)
+            g = Math.round(Math.random()*255)
+            b = Math.round(Math.random()*255)
+
+            mycolor ="rgb("+r+" , "+g+" , "+b+")"
+            document.write("<button onclick='changebackground(this)' style='background:"+mycolor+"''></button>")
+            a++
+        }
+
+        function changebackground(t)
+        {
+            document.body.style.background = t.style.background
+        }
+
+        </script>
+    </div>
+</body>
+</html>
