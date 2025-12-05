@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #clock
+    {
+        color:purple;
+        font-size: 100px;
+        font-family: Arial black;
+        width: 30%;
+        padding: 20px;
+        text-shadow: 5px 5px 5px gray;
+
+    }
+    h1
+    {
+        text-align: center;
+    }
+
+    
+</style>
+<body>
+    <h1>Using Date Class</h1>
+    <div id="clock">Clock</div>
+    <script>
+
+
+        var c = document.getElementById("clock")
+
+        var d ;
+        function show_time()
+        {
+            d = new Date()
+            c.innerHTML = d.toLocaleTimeString()
+        }
+
+        setInterval("show_time()",1000)
+ 
+    </script>
+
+
+</body>
+</html>
