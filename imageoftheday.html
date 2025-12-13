@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #banner
+    {
+        width:70%;
+        height: 300px;
+        display: block;
+        margin:auto;
+        box-shadow: 10px 10px 10px grey;
+    }
+    #mes
+    {
+        text-align: center;
+    }
+</style>
+<body>
+    <h1 id="mes">Image of the </h1>
+    <img src="images/p8.jpg" id="banner">
+<script>
+    var mes = document.getElementById("mes")
+    var banner =document.getElementById("banner")
+    var d = new Date()
+    var today = d.getDay()
+
+      switch(today)
+      {
+        case 0:
+        mes.innerHTML+= "SunDay"
+        banner.src="images/p1.jpg" 
+        break;
+        
+        case 1:
+        mes.innerHTML+= "MonDay"
+           banner.src="images/p2.jpg" 
+         break;      
+
+          case 2:
+        mes.innerHTML+= "TuesDay"
+           banner.src="images/p3.jpg" 
+         break;      
+
+          case 3:
+        mes.innerHTML+= "WednesDay"
+           banner.src="images/p4.jpg" 
+         break;      
+
+          case 4:
+        mes.innerHTML+= "ThursDay"
+           banner.src="images/p5.jpg" 
+         break;      
+
+          case 5:
+        mes.innerHTML+= "FriDay"
+           banner.src="images/p6.jpg" 
+         break;      
+
+          case 6:
+        mes.innerHTML+= "SaturDay"
+           banner.src="images/p7.jpg" 
+         break;   
+         default:   
+      }
+
+
+
+</script>    
+</body>
+</html>
