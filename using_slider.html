@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #tool
+    {
+        background: gray;
+        box-shadow: 10px 10px 10px gray;
+        width: 100%;
+
+    }
+
+    #t
+    {
+        width: 50%;
+        transform-origin: 50% 50%;
+    }
+</style>
+<body>
+    <div id="tool">
+        <span>Font Size<input id="fsize" type="range" min="10" max="100" value="25" ></span>
+        <span>Red <input id="red" type="range" min="0" max="255" value="0" ></span>
+        <span>Green <input id="green" type="range" min="0" max="255" value="0" ></span>
+        <span>Blue <input id="Blue" type="range" min="0" max="255" value="0" ></span>
+    </div>
+
+    <h1>About us</h1>
+    <p id="t">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+     reiciendis iste excepturi maxime veritatis quis error cum ipsa! Quod illum neque 
+     nihil dolor blanditiis. Sunt iure dolore impedit veniam commodi!
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque veniam ipsum, est 
+    repudiandae, illum deserunt facilis ipsam nulla temporibus commodi laboriosam numquam. 
+    Tenetur aut iste distinctio nesciunt autem. Ipsum, non?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, eligendi a. Vel
+    perspiciatis odit tempora architecto ut similique molestias accusamus fuga, natus iusto
+    fugit eius tenetur pariatur quas. Quae, impedit?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quia nisi soluta culpa, 
+    adipisci necessitatibus maiores placeat pariatur suscipit tempora quaerat quisquam eum dolor
+     asperiores debitis quidem repellendus ipsa laudantium.
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit temporibus accusantium facere 
+    vero dicta debitis aliquid recusandae quasi assumenda expedita, odio at quis? Ut, dolores aliquam 
+    ullam magnam placeat nisi?</p>
+
+
+    <script>
+        var fsize = document.getElementById("fsize")
+        var t = document.getElementById("t")
+
+
+
+        var red = document.getElementById("red")
+        var green = document.getElementById("green")
+        var Blue = document.getElementById("Blue")
+
+
+        fsize.onchange = function()
+        {
+            t.style.fontSize = this.value+"px"
+        }
+        red.onchange = function()
+        {
+            document.body.style.background = "rgb("+red.value+","+green.value+","+Blue.value+")"
+        }
+
+        green.onchange = function()
+        {
+            document.body.style.background = "rgb("+red.value+","+green.value+","+Blue.value+")"
+        }
+
+
+          Blue.onchange = function()
+        {
+            document.body.style.background = "rgb("+red.value+","+green.value+","+Blue.value+")"
+        }
+ 
+
+        document.title = "Ready"
+    </script>
+</body>
+</html>
