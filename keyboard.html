@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .birdstyle
+    {
+        position: absolute;
+        width: 10%;
+        left: 0px;
+        top:10px;
+    }
+</style>
+<body>
+    <script>
+       var k ;
+       var bird = document.createElement("img")
+       document.body.appendChild(bird)
+       bird.src="images/bird.gif"
+       bird.className="birdstyle"
+       var L = 0
+       function f1(e)
+      {
+        k = e.keyCode
+    
+    document.title = e.keyCode
+
+switch(k)
+{
+    //right Arrow' 39,left 37,38 up,down 40
+
+    case 39:
+        L=L+5
+        bird.style.left = L+"px"
+
+        break;
+
+    case 37:
+        L=L-5
+        bird.style.left = L+"px"
+
+        break;
+
+        case 38:
+             L=L-5
+        bird.style.top = L+"px"
+
+        break;
+
+        case 40:
+
+        L=L+5
+        bird.style.top = L+"px"
+
+        break;
+
+
+    }
+
+
+
+
+}
+document.title ="No Error"
+document.addEventListener("keydown",f1)
+
+    </script>
+
+</body>
+</html>
