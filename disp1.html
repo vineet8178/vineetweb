@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #banner img
+    {
+        width: 70%;
+        height: 400px;
+        box-shadow: 10px 10px 10px gray;
+        position: absolute;
+        left: 200px;
+        top: 10px;
+        transition: 2s;
+    }
+</style>
+<body onLoad="runbanner()">
+    <div id="banner">
+        <img id="p1" src="images/p1.jpg">
+        <img id="p2" src="images/p2.jpg">
+         <img id="p3" src="images/p3.jpg">
+          <img id="p4" src="images/p4.jpg">
+           <img id="p5" src="images/p5.jpg">
+
+    </div>
+    <script>
+        var c = 0
+        var t1;
+
+        var p1 = document.getElementById("p1")
+        var p2 = document.getElementById("p2")
+        var p3 = document.getElementById("p3")
+        var p4 = document.getElementById("p4")
+        var p5 = document.getElementById("p5")
+
+      // recursive Function
+          function  runbanner()
+    {
+
+        switch(c)
+        {
+            case 1:
+                p5.style.transform="scale(0) rotate(360deg)"
+                p5.style.opacity ="0"
+
+
+                break
+
+                 case 2:
+                p4.style.transform="scale(0) rotate(360deg)"
+                p4.style.opacity ="0"
+
+
+                break
+
+                 case 3:
+                p3.style.transform="scale(0) rotate(360deg)"
+                p3.style.opacity ="0"
+
+
+                break
+
+                 case 4:
+                p2.style.transform="scale(0) rotate(360deg)"
+                p2.style.opacity ="0"
+
+
+                break
+
+                 case 5:
+
+                break
+                case 6:
+                   p2.style.transform="scale(1) rotate(0deg)"
+                p2.style.opacity ="0"
+
+                  p3.style.transform="scale(1) rotate(0deg)"
+                p3.style.opacity ="0"
+
+                 p4.style.transform="scale(1) rotate(0deg)"
+                p4.style.opacity ="0"
+
+                 p5.style.transform="scale(1) rotate(0deg)"
+                p5.style.opacity ="0"
+
+
+                break          
+
+                  case 7:
+                   p2.style.transform="scale(1) rotate(0deg)"
+                p2.style.opacity ="1"
+
+                  p3.style.transform="scale(1) rotate(0deg)"
+                p3.style.opacity ="1"
+
+                 p4.style.transform="scale(1) rotate(0deg)"
+                p4.style.opacity ="1"
+
+                 p5.style.transform="scale(1) rotate(0deg)"
+                p5.style.opacity ="1"
+
+
+                break          
+
+
+        }
+
+
+
+        if(c<7)
+        {
+            c++
+        }
+        else
+        {
+            c=1
+        }
+
+
+
+
+
+        document.title = c
+        t1 = setTimeout("runbanner()",2000)
+
+
+        document.title = "Ready"
+    }   
+    </script>
+
+  
+</body>
+</html>

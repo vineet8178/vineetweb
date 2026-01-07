@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Arrey in JavaScript</h1>
+    <script>
+      //  Index Array and single dim
+      var mycolor = new Array(5)
+
+      mycolor[0]="red"
+      mycolor[3]=101
+      mycolor[2] = true
+
+    //  document.bgcolor = mycolor[0]
+
+   // var uname = new Arrey("Raj","Ravi", "Ashok","Aditya","Rishi")
+      // document.write("<h1>")
+   // document.write(uname[3])   
+  // document.write(" is my best friend")
+
+      var bcolor = ["red","green","blue","orange","purple"]
+      var b = document.createElement("button")
+      document.body.appendChild(b)
+      b.innerHTML="Click to change color"
+      document.bgcolor = bcolor[4]
+      var c = 0
+
+      b.onclick = function()
+      {
+        document.body.style.background = bcolor[c]
+        if(c<bcolor.length)
+      {
+        c++
+      }
+      else
+      {
+        c=0
+      }
+      }
+
+
+      document.title="Working Good"
+
+    </script>
+</body>
+</html>
