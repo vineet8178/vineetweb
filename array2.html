@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var mycolor = new Array()
+        var r,g,b,c
+        for(var i = 0;i<=5;i++)
+    {
+        r = Math.round(Math.random()*255)
+        g = Math.round(Math.random()*255)
+        b = Math.round(Math.random()*255)
+    mycolor[i]=`rgb(${r},${g},${b})`
+    c = `rgb(${r},${g},${b})`
+    c
+    document.write("<h1 style='background:"+c+"'>"+mycolor[i]+"</h1>")    
+    }
+    //document.body.style.background = mycolor[7]
+
+    document.title="no Error"
+    </script>
+    
+</body>
+</html>

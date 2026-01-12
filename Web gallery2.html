@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+<title>illustration gallery</title>
+
+
+<!--
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  -->
+</head>
+
+<style>
+
+@keyframes zoom 
+
+{
+from{transform:scale(5);}
+to{transform:scale(1)}
+}
+
+body
+{
+background:#374151;
+background-size: cover;
+}
+
+
+
+header
+{
+background:#374151;
+color:white;
+width:90%;
+text-align:center;
+font-family:Arial black;
+font-size:50px;
+height:100px;
+box-shadow:10px 8px 20px cyan;
+margin:auto;
+margin-bottom:20px;
+}
+
+.pic
+{
+
+width:50%;
+box-shadow:5px 5px 20px cyan;
+margin:60px;
+transition:0.50s;
+}
+main
+{
+//display:flex;
+width:90%;
+margin:auto;
+//flex-wrap:wrap;
+}
+
+.pic:hover
+{
+transform:scale(1.20);
+border-radius:0px;
+}
+
+</style>
+<header> <div >Web Photo Gallery </div></header>
+
+<body bgcolor="black">
+
+<main>
+  <a href="p1.html"><img src="images/a1.jpg" class="pic"></a>
+<a href="p2.html"><img src="images/a2.jpg" class="pic"></a>
+
+<a href="p3.html"><img src="images/a3.jpg" class="pic"></a>
+<a href="p4.html"><img src="images/a4.jpg" class="pic"></a>
+
+<a href="p5.html"><img src="images/a5.jpg" class="pic"></a>
+<a href="p6.html"><img src="images/a6.jpg" class="pic"></a>
+
+<a href="p7.html"><img src="images/a7.jpg" class="pic"></a>
+<a href="p8.html"><img src="images/a8.jpg" class="pic"></a>
+
+<a href="p9.html"><img src="images/a9.jpg" class="pic"></a>
+
+</main>
+
+<script>
+  var list = document.getElementsByTagName("img")
+  for(var i = 0;i<list.length;i++)
+{
+ 
+  list[i].onclick = function()
+  {
+    this.style.transition ="0.10s"
+    this.style.transform = "scale(0.10)"
+  }
+  list[i].onmouseout = function()
+  {
+    this.style.transform = "scale(1)"
+     this.style.transition ="1.50s"
+  }
+}
+
+
+
+function f1(e)
+{
+
+    s = Math.round(window.scrollY)
+
+    if(s>250){list[0].style.transform="scale(0)";list[0].style.opacity="0"}
+    else{list[0].style.transform="scale(1)";list[0].style.opacity="1"}
+
+     if(s>750){list[0].style.transform="scale(0)";list[0].style.opacity="0"}
+    else{list[0].style.transform="scale(1)";list[0].style.opacity="1"}
+
+     if(s>1200){list[0].style.transform="scale(0)";list[0].style.opacity="0"}
+    else{list[0].style.transform="scale(1)";list[0].style.opacity="1"}
+
+     if(s>1700){list[0].style.transform="scale(0)";list[0].style.opacity="0"}
+    else{list[0].style.transform="scale(1)";list[0].style.opacity="1"}
+
+     if(s>2100){list[0].style.transform="scale(0)";list[0].style.opacity="0"}
+    else{list[0].style.transform="scale(1)";list[0].style.opacity="1"}
+
+     if(s>2500){list[0].style.transform="scale(0)";list[0].style.opacity="0"}
+    else{list[0].style.transform="scale(1)";list[0].style.opacity="1"}
+
+
+
+
+
+document.title = s
+    
+}
+
+window.addEventListener("scroll", f1)
+
+</script>
+
+
+<footer></footer>
+
+</body>
+
+</html>
