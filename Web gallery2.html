@@ -68,34 +68,35 @@ border-radius:0px;
 </style>
 <header> <div >Web Photo Gallery </div></header>
 
-<body bgcolor="black">
+<body bgColor="black">
 
 <main>
-  <a href="p1.html"><img src="images/a1.jpg" class="pic"></a>
-<a href="p2.html"><img src="images/a2.jpg" class="pic"></a>
+  <a hef="p1.html"><img src="images/a1.jpg" class="pic"></a>
+<a hef="p2.html"><img src="images/a2.jpg" class="pic"></a>
 
-<a href="p3.html"><img src="images/a3.jpg" class="pic"></a>
-<a href="p4.html"><img src="images/a4.jpg" class="pic"></a>
+<a hef="p3.html"><img src="images/a3.jpg" class="pic"></a>
+<a hef="p4.html"><img src="images/a4.jpg" class="pic"></a>
 
-<a href="p5.html"><img src="images/a5.jpg" class="pic"></a>
-<a href="p6.html"><img src="images/a6.jpg" class="pic"></a>
+<a hef="p5.html"><img src="images/a5.jpg" class="pic"></a>
+<a hef="p6.html"><img src="images/a6.jpg" class="pic"></a>
 
-<a href="p7.html"><img src="images/a7.jpg" class="pic"></a>
-<a href="p8.html"><img src="images/a8.jpg" class="pic"></a>
+<a hef="p7.html"><img src="images/a7.jpg" class="pic"></a>
+<a hef="p8.html"><img src="images/a8.jpg" class="pic"></a>
 
-<a href="p9.html"><img src="images/a9.jpg" class="pic"></a>
+<a ref="p9.html"><img src="images/a9.jpg" class="pic"></a>
 
 </main>
 
 <script>
   var list = document.getElementsByTagName("img")
+  var s = 0;
   for(var i = 0;i<list.length;i++)
 {
  
   list[i].onclick = function()
   {
     this.style.transition ="0.10s"
-    this.style.transform = "scale(0.10)"
+    this.style.transform = "scale(0.50)"
   }
   list[i].onmouseout = function()
   {
@@ -114,20 +115,20 @@ function f1(e)
     if(s>250){list[0].style.transform="scale(0)";list[0].style.opacity="0"}
     else{list[0].style.transform="scale(1)";list[0].style.opacity="1"}
 
-     if(s>750){list[0].style.transform="scale(0)";list[0].style.opacity="0"}
-    else{list[0].style.transform="scale(1)";list[0].style.opacity="1"}
+     if(s>750){list[1].style.transform="scale(0)";list[0].style.opacity="0"}
+    else{list[1].style.transform="scale(1)";list[0].style.opacity="1"}
 
-     if(s>1200){list[0].style.transform="scale(0)";list[0].style.opacity="0"}
-    else{list[0].style.transform="scale(1)";list[0].style.opacity="1"}
+     if(s>1200){list[2].style.transform="scale(0)";list[0].style.opacity="0"}
+    else{list[2].style.transform="scale(1)";list[0].style.opacity="1"}
 
-     if(s>1700){list[0].style.transform="scale(0)";list[0].style.opacity="0"}
-    else{list[0].style.transform="scale(1)";list[0].style.opacity="1"}
+     if(s>1700){list[3].style.transform="scale(0)";list[0].style.opacity="0"}
+    else{list[3].style.transform="scale(1)";list[0].style.opacity="1"}
 
-     if(s>2100){list[0].style.transform="scale(0)";list[0].style.opacity="0"}
-    else{list[0].style.transform="scale(1)";list[0].style.opacity="1"}
+     if(s>2100){list[4].style.transform="scale(0)";list[0].style.opacity="0"}
+    else{list[4].style.transform="scale(1)";list[0].style.opacity="1"}
 
-     if(s>2500){list[0].style.transform="scale(0)";list[0].style.opacity="0"}
-    else{list[0].style.transform="scale(1)";list[0].style.opacity="1"}
+     if(s>2500){list[5].style.transform="scale(0)";list[0].style.opacity="0"}
+    else{list[5].style.transform="scale(1)";list[0].style.opacity="1"}
 
 
 
