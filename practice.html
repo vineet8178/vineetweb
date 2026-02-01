@@ -1,127 +1,139 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Practice Pages</title>
 
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      background: #F1F8F6;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
+    :root {
+      --dark: #0f172a;
+      --card: #111827;
+      --gold: #b0a36e;
+      --text: #e5e7eb;
     }
 
-    /* Header styling */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--dark);
+      color: var(--text);
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--text);
+      transition: all 0.3s ease;
+    }
+
+    a:hover {
+      color: var(--gold);
+    }
+
+    /* Header */
     header {
-      border: 1px solid black;
-      border-radius: 20px;
-      background: #A8D5BA;
-      margin: 20px auto;
+      max-width: 900px;
+      margin: 30px auto 20px;
+      background: var(--card);
+      padding: 25px 20px;
+      border-radius: 25px;
       text-align: center;
-      padding: 15px;
-      width: 80%;
-      box-shadow: 10px 10px 10px gray;
+      color: var(--gold);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     header:hover {
-      transform: scale(1.02);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.7);
     }
 
     header h1 {
-      color: #374151;
       margin: 0;
+      font-weight: 600;
+      font-size: 2em;
     }
 
-    /* Navigation area */
+    /* Navigation Cards */
     nav {
-      background: #A8D5BA;
-      width: 80%;
-      margin: 30px auto;
-      padding: 15px 0;
-      border-radius: 10px;
-      box-shadow: 10px 10px 10px gray;
-      border: 1px solid black;
+      max-width: 900px;
+      margin: 20px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 15px;
     }
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 0;
+    nav a {
+      display: block;
+      padding: 12px;
+      background: var(--card);
+      border-radius: 15px;
+      text-align: center;
+      font-weight: 500;
+      color: var(--text);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background: var(--gold);
+      color: var(--dark);
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.7);
+    }
+
+    /* Section Titles */
+    section {
+      max-width: 900px;
+      margin: 40px auto 20px;
+      padding: 20px;
+      background: var(--card);
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.7);
+    }
+
+    section h2 {
       margin: 0;
+      font-weight: 600;
+      font-size: 1.6em;
+      color: var(--gold);
     }
 
-    nav ul li {
-      margin: 10px 15px;
-    }
-
-    /* Button style links */
-    nav ul li a {
-      text-decoration: none;
-      color: #000;
-      font-weight: bold;
-      background: #D1EED6;
-      padding: 10px 20px;
-      border-radius: 8px;
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-      transition: all 0.4s ease;
-      display: inline-block;
-    }
-
-    /* Hover animation */
-    nav ul li a:hover {
-      background: #56b27b;
-      color: white;
-      transform: translateY(-6px) scale(1.05);
-      box-shadow: 0 0 20px #8ae6b0, 0 0 30px #6fd49c;
-    }
-
-    /* Home link */
+    /* Home Link */
     .home-link {
       display: block;
       text-align: center;
-      margin-top: 10px;
-      font-weight: bold;
-      color: #1e3a8a;
-      text-decoration: none;
+      margin: 20px 0;
+      font-weight: 600;
+      color: var(--gold);
       font-size: 18px;
       transition: all 0.3s ease;
     }
 
     .home-link:hover {
-      color: #2563eb;
-      text-decoration: underline;
+      color: #f3e1a1;
       transform: scale(1.1);
     }
-    main
-    {
-       border: 1px solid black;
-      border-radius: 20px;
-      background: #A8D5BA;
-      margin: 40px auto;
-      text-align: center;
-      padding: 15px;
-      width: 80%;
-      box-shadow: 10px 10px 10px gray;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-     main:hover {
-      transform: scale(1.02);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    }
-     main h1 {
-      color: #374151;
-      margin: 0;
+
+    @media (max-width: 500px) {
+      header h1 {
+        font-size: 1.5em;
+      }
     }
 
   </style>
 </head>
-
 <body>
 
   <a class="home-link" href="index.html">🏠 Home</a>
@@ -130,54 +142,58 @@
     <h1>Practice Work of HTML</h1>
   </header>
 
-  <nav>
-    <ul>
-      <li><a href="Menu.html">Project 1</a></li>
-      <li><a href="list.html">List</a></li>
-      <li><a href="menu in.html">Menu</a></li>
-      <li><a href="Web gallery.html">Gallery</a></li>
-      <li><a href="Bookmark.html">Policy</a></li>
-      <li><a href="Tables.html">Table</a></li>
-      <li><a href="animate.html">Animation</a></li>
-      <li><a href="audio.html">Audio Animation</a></li>
-      <li><a href="video1.html">Video Animation</a></li>
-      <li><a href="iframe.html">Iframe</a></li>
-      <li><a href="form.html">Form</a></li>
-      <li><a href="banner2.html">News</a></li>
-      <li><a href="Registration.html">Registration</a></li>
-    </ul>
-  </nav>
-  <main>
-    <h1>Practice Work of JAVA SCRIPT</h1>
-  </main>
+  <section>
+    <h2>HTML Projects</h2>
+    <nav>
+      <a href="Menu.html">Project 1</a>
+      <a href="list.html">List</a>
+      <a href="menu in.html">Menu</a>
+      <a href="Web gallery.html">Gallery</a>
+      <a href="Bookmark.html">Policy</a>
+      <a href="Tables.html">Table</a>
+      <a href="animate.html">Animation</a>
+      <a href="audio.html">Audio</a>
+      <a href="video1.html">Video</a>
+      <a href="iframe.html">Iframe</a>
+      <a href="form.html">Form</a>
+      <a href="banner2.html">News</a>
+      <a href="Registration.html">Registration</a>
+    </nav>
+  </section>
 
-  <nav>
-    <ul>
-      <li><a href="first.html">Project 1</a></li>
-      <li><a href="creating_tag.html">Creating</a></li>
-      <li><a href="getelemet.html">Picture</a></li>
-      <li><a href="creatingdilogbox.html">Gaming Box</a></li>
-       <li><a href="forloop.html">Table</a></li>
-       <li><a href="forloopexample.html">Image</a></li>
-        <li><a href="while.html">Color picker</a></li>
-         <li><a href="date.html">Clock</a></li>
-           <li><a href="imageoftheday.html">Days</a></li>
-            <li><a href="colorbox.html">Color box</a></li>
-             <li><a href="slider.html">Slider</a></li>
-              <li><a href="using_slider.html">Font size</a></li>
-               <li><a href="slider2.html">Image slider</a></li>
-                <li><a href="keyboard.html">Fly bird</a></li>
-                <li><a href="disp1.html">Banner</a></li>
-                <li><a href="array1.html">Background color</a></li>
-                 <li><a href="array2.html">Color</a></li>
-                 <li><a href="Web gallery2.html">Images</a></li>
+  <section>
+    <h2>JavaScript Projects</h2>
+    <nav>
+      <a href="first.html">Project 1</a>
+      <a href="creating_tag.html">Creating</a>
+      <a href="getelemet.html">Picture</a>
+      <a href="creatingdilogbox.html">Gaming Box</a>
+      <a href="forloop.html">Table</a>
+      <a href="forloopexample.html">Image</a>
+      <a href="while.html">Color picker</a>
+      <a href="date.html">Clock</a>
+      <a href="imageoftheday.html">Days</a>
+      <a href="colorbox.html">Color box</a>
+      <a href="slider.html">Slider</a>
+      <a href="using_slider.html">Font size</a>
+      <a href="slider2.html">Image slider</a>
+      <a href="keyboard.html">Fly bird</a>
+      <a href="disp1.html">Banner</a>
+      <a href="array1.html">Background color</a>
+      <a href="array2.html">Color</a>
+      <a href="Web gallery2.html">Images</a>
+    </nav>
+  </section>
 
-
-
-
-
-    </ul>
-  </nav>
+   <section>
+    <h2>Bootstrap Projects</h2>
+    <nav>
+      <a href="First bootstrap page.html">Project 1</a>
+       <a href="Second page.html">Banner</a>
+     
+    </nav>
+  </section>
 
 </body>
 </html>
+  
