@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>12 Principles of Animation</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:linear-gradient(135deg,#020617,#0f172a);
+  color:#e5e7eb;
+  background-image: url(images/bg.gif);
+}
+
+/* NAVBAR */
+nav{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(2,6,23,0.95);
+  border-bottom:1px solid #1e293b;
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+.navbar{
+  max-width:1200px;
+  margin:auto;
+  padding:15px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.logo{
+  color:#38bdf8;
+  font-size:22px;
+  font-weight:600;
+}
+.menu a{
+  color:#cbd5f5;
+  text-decoration:none;
+  margin-left:20px;
+  font-size:14px;
+}
+.menu a:hover{color:#38bdf8;}
+
+/* HEADER */
+header{
+  text-align:center;
+  padding:40px 20px;
+}
+header h1{
+  color:#38bdf8;
+  font-size:32px;
+}
+header p{
+  color:#94a3b8;
+  font-size:15px;
+}
+
+/* CONTAINER */
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:20px;
+}
+
+/* CARD */
+.card{
+  display:flex;
+  gap:25px;
+  align-items:center;
+  background:rgba(15,23,42,0.6);
+  border:1px solid rgba(148,163,184,0.2);
+  border-radius:20px;
+  padding:25px;
+  margin-bottom:35px;
+  cursor:pointer;
+  transition:.3s;
+  height: 300px;
+}
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 25px 50px rgba(56,189,248,.25);
+}
+.card img{
+  width:220px;
+  border-radius:15px;
+  border:2px solid rgba(56,189,248,.4);
+}
+.text h2{color:#22d3ee;margin-bottom:10px;}
+.text p{color:#cbd5f5;line-height:1.7;}
+
+/* MODAL */
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(2,6,23,.85);
+  display:none;
+  align-items:center;
+  justify-content:center;
+}
+.modal-content{
+  background:#020617;
+  max-width:650px;
+  padding:30px;
+  border-radius:20px;
+  border:1px solid #1e293b;
+}
+.modal-content h2{color:#38bdf8;margin-bottom:15px;}
+.modal-content p{line-height:1.8;}
+.close{color:#f87171;cursor:pointer;text-align:right;margin-bottom:10px;}
+
+@media(max-width:768px){
+  .card{flex-direction:column;text-align:center;}
+  .card img{width:100%;max-width:300px;}
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#020617;
+    border-top:1px solid #1e293b;
+    color:#94a3b8;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="navbar">
+    <div class="logo"> Animation Principles</div>
+    <div class="menu">
+      <a href="#">Home</a>
+      <a href="#principles">Principles</a>
+      <a href="3d.html">3D Animation</a>
+    </div>
+  </div>
+</nav>
+
+<header>
+<h1>12 Principles of Animation</h1>
+<p>Click any principle to read full explanation</p>
+</header>
+
+<div class="container" id="principles">
+
+<!-- 1 to 12 -->
+<script>
+const principles = [
+["1. Squash and Stretch","images/squash and stretch.gif","Shows weight and flexibility.",
+"Arguably the most fundamental of the 12 principles of animation. Squash and stretch is applied to give a sense of weight and/or flexibility to objects or even to people. Animate a simple object like a bouncing ball - as it hits the ground, you can squash the ball flat and widen it."],
+
+["2. Anticipation","images/Anticipation.gif","Prepares the viewer.",
+"Anticipation in animation prepares the audience for what will happen next. It involves a small movement or action that precedes a larger one. For instance, before a character jumps, they will often squat momentarily. This squatting motion is an example of anticipation in animation, as it signals to the audience that a jump is coming up. In this example, Tarzan creates an anticipation effect by squatting and jumping around high branches and vines. This technique makes the animation realistic as it mimics how we move and act in real life, where small movements often precede our actions."],
+
+["3. Staging","images/Staging.gif","Clear presentation.",
+"When considering staging, you’re in the role of a film or theatre director. You need to think about where you’re putting the camera, what it’s focusing on, where the ‘actors’ will be and what they’re going to do. Whether they’re fun cartoon characters or realistically drawn people, staging matters and is sometimes underestimated."],
+
+["4. Straight Ahead & Pose to Pose","images/Straight Ahead & Pose to Pose.gif","Two animation methods.",
+"Drawing animations can be done in 2 ways - Straight Ahead Action and Pose to Pose. Straight ahead action involves drawing an action frame by frame, creating a smooth flow of movement. This method requires starting with a drawing and then proceeding to draw sequentially, most of the time not knowing the last frame. However, this approach is time-consuming as it requires many frames to be drawn for a single action. The example below uses the Straight Ahead technique. Here, the prince from the movie Beauty and the Beast, shakes off the water in a smooth manner."],
+
+["5. Follow Through & Overlapping","images/Follow Through & Overlapping.gif","Natural motion.",
+"Follow Through and Overlapping action are two important techniques used in animation to create realistic and fluid motion. These techniques involve parts of the character in motion even after the character has stopped. For example, when a character wearing a cape runs and comes to a halt, the cape and the character’s hair continue to sway for a moment before they get pulled back to the character. Here, the cape follows through with the character’s motion. The tendency of the cape and hair to move at a different rate from the character depicts the overlapping action. Here’s an example from the movie Mulan. The protagonist looks from side to side in disbelief. As she moves her head, her hair follows through and overlaps with her action."],
+
+["6. Slow In & Slow Out","images/Slow In & Slow Out.gif","Smooth movement.",
+"an object or a character in animated video start their movements out more slowly, then picks up speed and finishes with deceleration."],
+
+["7. Arc","images/Arc.gif","Curved motion.",
+"Arcs refers to the movement of an object or a character in curves rather than a straight line. We humans, move in curves. Even a simple movement, like turning our head, follows a curved path. Imagine turning your head in a straight line. It almost feels robotic and creepy. So, to make the animation more realistic and natural, animators use this technique of curved trajectory motion. For example, when a character swings their sword, it is animated in a curved path rather than a straight line. Here, Aladdin swings the sword at the snake in an arched motion, which makes the animation feel complete."],
+
+["8. Secondary Action","images/Secondary Action.gif","Support action.",
+"Secondary action is an additional action that supports or enhances the main action without distracting from it. It adds more life, personality, and detail to the scene."],
+
+["9. Timing","images/Timing.gif","Speed control.",
+"Timing involves a few simple principles: how quickly something moves and how long it stays still. Slowing something down in time adds weight, gravity, and mass. Speeding something up adds a sense of speed, lightness, and energy."],
+
+["10. Exaggeration","images/Exaggeration.gif","More impact.",
+"Exaggeration is an animation principle where actions, expressions, or movements are made bigger, stronger, or more dramatic than in real life to make the animation more entertaining, clear, and expressive."],
+
+["11. Solid Drawing","images/Solid Drawing.gif","3D feel.",
+"Solid drawing is an animation principle that ensures characters and objects are drawn with weight, volume, and balance, making them appear three-dimensional and believable on screen."],
+
+["12. Appeal","images/Appeal.gif","Attractive design.",
+"Appeal is an animation principle that makes a character, object, or scene interesting, attractive, and engaging to the audience. It’s what makes viewers want to watch or connect with the animation."]
+];
+
+document.write(principles.map(p=>`
+<div class="card" onclick="openBox('${p[0]}','${p[3]}')">
+  <img src="${p[1]}">
+  <div class="text">
+    <h2>${p[0]}</h2>
+    <p>${p[2]}</p>
+  </div>
+</div>`).join(""));
+</script>
+
+</div>
+
+<div class="modal" id="infoBox">
+  <div class="modal-content">
+    <div class="close" onclick="closeBox()">✖ Close</div>
+    <h2 id="boxTitle"></h2>
+    <p id="boxText"></p>
+  </div>
+</div>
+
+<script>
+function openBox(title,text){
+  boxTitle.innerText=title;
+  boxText.innerText=text;
+  infoBox.style.display="flex";
+}
+function closeBox(){
+  infoBox.style.display="none";
+}
+</script>
+
+<footer>
+    <p> Created by vineet</p>
+</footer>
+
+</body>
+</html>

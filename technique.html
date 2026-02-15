@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Animation Techniques</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:linear-gradient(135deg,#020617,#0f172a);
+  color:#e5e7eb;
+    background-image: url(images/bg.gif);
+}
+
+/* NAVBAR */
+nav{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(2,6,23,0.95);
+  border-bottom:1px solid #1e293b;
+      height: 100px;
+  display: flex;
+  align-items: center;
+}
+.navbar{
+  max-width:1200px;
+  margin:auto;
+  padding:15px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.logo{
+  color:#38bdf8;
+  font-size:22px;
+  font-weight:600;
+}
+.menu a{
+  color:#cbd5f5;
+  text-decoration:none;
+  margin-left:20px;
+  font-size:14px;
+}
+.menu a:hover{color:#38bdf8;}
+
+/* HEADER */
+header{
+  text-align:center;
+  padding:40px 20px;
+}
+header h1{
+  color:#38bdf8;
+  font-size:32px;
+}
+header p{
+  color:#94a3b8;
+  font-size:15px;
+}
+
+/* CONTAINER */
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:20px;
+}
+
+/* CARD */
+.card{
+  display:flex;
+  gap:25px;
+  align-items:center;
+  background:rgba(15,23,42,0.6);
+  border:1px solid rgba(148,163,184,0.2);
+  border-radius:20px;
+  padding:25px;
+  margin-bottom:35px;
+  cursor:pointer;
+  transition:.3s;
+}
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 25px 50px rgba(56,189,248,.25);
+}
+.card img{
+  width:220px;
+  border-radius:15px;
+  border:2px solid rgba(56,189,248,.4);
+}
+.text h2{color:#22d3ee;margin-bottom:10px;}
+.text p{color:#cbd5f5;line-height:1.7;}
+
+/* MODAL */
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(2,6,23,.85);
+  display:none;
+  align-items:center;
+  justify-content:center;
+}
+.modal-content{
+  background:#020617;
+  max-width:650px;
+  padding:30px;
+  border-radius:20px;
+  border:1px solid #1e293b;
+}
+.modal-content h2{color:#38bdf8;margin-bottom:15px;}
+.modal-content p{line-height:1.8;}
+.close{color:#f87171;cursor:pointer;text-align:right;margin-bottom:10px;}
+
+@media(max-width:768px){
+  .card{flex-direction:column;text-align:center;}
+  .card img{width:100%;max-width:300px;}
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#020617;
+    border-top:1px solid #1e293b;
+    color:#94a3b8;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="navbar">
+    <div class="logo"> Animation Techniques</div>
+    <div class="menu">
+      <a href="Project3.html">Home</a>
+      <a href="#techniques">Techniques</a>
+      <a href="3d.html">3D Animation</a>
+    </div>
+  </div>
+</nav>
+
+<header>
+<h1>Animation Techniques</h1>
+<p>Click any technique to read full explanation</p>
+</header>
+
+<div class="container" id="techniques">
+
+<script>
+const techniques = [
+["1. Traditional Animation","images/25.gif","Hand-drawn animation.",
+"Traditional animation is one of the oldest animation techniques. In this method, each frame is drawn by hand on paper or digitally. When these drawings are played in sequence, they create the illusion of movement. Classic animated movies were created using this technique."],
+
+["2. 2D Animation","images/26.gif","Flat digital animation.",
+"2D animation is created on a two-dimensional plane using software. Characters and objects have height and width but no depth. It is widely used in cartoons, educational videos, explainer videos, and mobile applications."],
+
+["3. 3D Animation","images/27.gif","Three-dimensional animation.",
+"3D animation creates characters and environments in a three-dimensional space. Models have depth, volume, and realistic movement. This technique is commonly used in movies, video games, and advertisements."],
+
+["4. Stop Motion Animation","images/28.gif","Frame-by-frame animation.",
+"Stop motion animation is created by taking photographs of objects frame by frame while slightly moving them each time. When the images are played in sequence, the objects appear to move on their own. Clay and puppet animation are common examples."],
+
+["5. Motion Graphics","images/29.gif","Animated graphics and text.",
+"Motion graphics focus on animating text, shapes, icons, and graphic elements instead of characters. This technique is often used in advertisements, title sequences, presentations, and social media content."]
+];
+
+document.write(techniques.map(t=>`
+<div class="card" onclick="openBox('${t[0]}','${t[3]}')">
+  <img src="${t[1]}">
+  <div class="text">
+    <h2>${t[0]}</h2>
+    <p>${t[2]}</p>
+  </div>
+</div>`).join(""));
+</script>
+
+
+</div>
+
+<div class="modal" id="infoBox">
+  <div class="modal-content">
+    <div class="close" onclick="closeBox()">✖ Close</div>
+    <h2 id="boxTitle"></h2>
+    <p id="boxText"></p>
+  </div>
+</div>
+
+<script>
+function openBox(title,text){
+  boxTitle.innerText = title;
+  boxText.innerText = text;
+  infoBox.style.display = "flex";
+}
+function closeBox(){
+  infoBox.style.display = "none";
+}
+</script>
+
+<footer>
+  <p>© Animation Basics | Created by Vineet</p>
+</footer>
+
+</body>
+</html>

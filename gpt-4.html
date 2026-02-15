@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GPT-4 – Details</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+body{
+    background:#eef2ff;
+    animation: fadeAll .8s ease-in-out;
+}
+
+@keyframes fadeAll{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+/* Navbar */
+nav{
+    background:#1e3a8a;
+    padding:15px 6%;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-size:15px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#c7d2fe;
+}
+
+/* Hero Section */
+.hero{
+    padding:80px 20px;
+    text-align:center;
+    color:white;
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+               url("images/1.png") center/cover;
+    animation: slide .9s ease-in-out;
+}
+
+@keyframes slide{
+    from{opacity:0; transform:translateY(40px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+.hero h1{
+    font-size:40px;
+}
+.hero p{
+    margin-top:8px;
+    font-size:18px;
+    opacity:.9;
+}
+
+/* Content Box */
+.content-box{
+    background:white;
+    padding:30px;
+    width:85%;
+    max-width:900px;
+    margin:30px auto;
+    border-radius:10px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.15);
+    animation: fadeUp .9s ease-in-out;
+}
+
+@keyframes fadeUp{
+    from{opacity:0; transform:translateY(30px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+.content-box h2{
+    color:#1e3a8a;
+    margin-bottom:10px;
+}
+
+.content-box ul{
+    padding-left:20px;
+    line-height:1.7;
+}
+
+/* Footer */
+footer{
+    margin-top:40px;
+    background:#1e3a8a;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav>
+    <h2>Generative AI</h2>
+    <div>
+        <a href="Project2.html">Home</a>
+        <a href="gpt-4.html">GPT-4</a>
+        <a href="claude 3.html">Claude 3</a>
+        <a href="Llama 3.html">Llama 3</a>
+        <a href="Midjourney.html">Midjourney</a>
+        <a href="Stable diffusion.html">Stable</a>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+    <h1>GPT-4</h1>
+    <p>OpenAI ka sabse advanced text & reasoning model</p>
+</section>
+
+<!-- About -->
+<div class="content-box">
+    <h2>What is GPT-4?</h2>
+    <p>
+        GPT-4 ek language model hai jo human-level text generate, coding, essays, 
+        reasoning aur knowledge tasks bahut accurately perform karta hai.
+    </p>
+</div>
+
+<!-- Features -->
+<div class="content-box">
+    <h2>Key Features</h2>
+    <ul>
+        <li>Advanced coding and debugging</li>
+        <li>Essay, blog & report writing</li>
+        <li>Mathematical reasoning</li>
+        <li>Chatbot & automation</li>
+        <li>Creative storytelling</li>
+        <li>High accuracy responses</li>
+    </ul>
+</div>
+
+<!-- Uses -->
+<div class="content-box">
+    <h2>Where is GPT-4 Used?</h2>
+    <ul>
+        <li>College assignments & research</li>
+        <li>Business automation</li>
+        <li>Programming help</li>
+        <li>Website & app development</li>
+        <li>Studying & notes preparation</li>
+    </ul>
+</div>
+
+<footer>
+    © 2025 Design By Vineet | GPT-4 Page
+</footer>
+
+</body>
+</html>

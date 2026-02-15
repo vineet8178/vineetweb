@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Llama 3 – Details</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;font-family:Arial, Helvetica, sans-serif}
+  body{background:#eef2ff;color:#1e3a8a;}
+
+  /* NAVBAR – Original theme color */
+  nav{
+    background:#1e3a8a;
+    color:#fff;
+    padding:14px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+
+  nav a{
+    color:#fff;
+    margin-left:18px;
+    text-decoration:none;
+    font-weight:600;
+  }
+
+  /* HERO – Blue gradient restored */
+  .hero{
+    background:linear-gradient(180deg, rgba(30,58,138,0.9), rgba(30,58,138,0.6));
+    color:#fff;
+    padding:60px 6%;
+  }
+
+  .hero-inner{
+    max-width:1100px;
+    margin:auto;
+    display:flex;
+    gap:24px;
+    align-items:center;
+    flex-wrap:wrap;
+  }
+
+  .hero-text{flex:1;min-width:260px}
+  .hero h1{font-size:36px;margin-bottom:8px}
+  .hero p{opacity:.95}
+  .note{font-size:14px;color:#e2e8f0;margin-top:8px}
+
+  .hero-img{text-align:center;flex:1;min-width:320px}
+  .hero-img img{
+    width:100%;
+    max-width:1200px;
+    border-radius:12px;
+    box-shadow:0 8px 24px rgba(0,0,0,0.25);
+  }
+
+  /* CONTENT */
+  .container{max-width:1000px;margin:30px auto;padding:0 6%}
+  .card{
+    background:#fff;
+    padding:20px;
+    border-radius:10px;
+    margin-bottom:18px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.08);
+  }
+
+  .card h2{
+    color:#1e3a8a;
+    margin-bottom:8px;
+  }
+
+  ul{padding-left:18px;line-height:1.7}
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+
+  footer{
+    background:#1e3a8a;
+    color:white;
+    padding:18px 6%;
+    text-align:center;
+    margin-top:30px;
+  }
+
+  @media(max-width:800px){
+    .two-col{grid-template-columns:1fr}
+    .hero-inner{flex-direction:column}
+    .hero h1{font-size:28px}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div style="font-weight:700">Generative AI</div>
+  <div>
+    <a href="Project2.html">Home</a>
+        <a href="gpt-4.html">GPT-4</a>
+        <a href="claude 3.html">Claude 3</a>
+        <a href="Llama 3.html">Llama 3</a>
+        <a href="Midjourney.html">Midjourney</a>
+        <a href="Stable diffusion.html">Stable</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <h1>Llama 3</h1>
+      <p>Llama 3 — Meta (Facebook) dwara banaya gaya ek versatile open-weight language model. Yeh research, fine-tuning aur chat assistants ke liye accha choice hai.</p>
+      <p class="note">Tip: Students ke liye notes, projects, coding aur explanation me helpful hota hai.</p>
+    </div>
+
+    <div class="hero-img">
+      <img src="images/3.png" alt="Person working on laptop" width="1200">
+    </div>
+  </div>
+</section>
+
+<div class="container">
+
+  <div class="card">
+    <h2>What is Llama 3?</h2>
+    <p>Llama 3 ek modern language model hai jo open research aur custom training ke liye perfect hai.</p>
+  </div>
+
+  <div class="card">
+    <h2>Key Features</h2>
+    <div class="two-col">
+      <div>
+        <ul>
+          <li>Open-weight available</li>
+          <li>Fine-tuning friendly</li>
+          <li>Strong text generation</li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li>Research experiments ke liye useful</li>
+          <li>Chat assistants me achha perform karta</li>
+          <li>Local systems par bhi chal sakta hai</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Uses for Students</h2>
+    <ul>
+      <li>Notes & summaries</li>
+      <li>Homework explanations</li>
+      <li>Code generation & debugging</li>
+      <li>Mini chatbot projects</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>How to Use</h2>
+    <ol style="padding-left:18px; line-height:1.7">
+      <li>Few-shot prompts try kare</li>
+      <li>Custom dataset se tune kare</li>
+      <li>Output evaluate karke improve kare</li>
+    </ol>
+  </div>
+
+</div>
+
+<footer>
+  © 2025 Llama 3 — Design By Vineet 
+</footer>
+
+</body>
+</html>

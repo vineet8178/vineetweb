@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Generative AI – Student Design</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+body{
+    background:#eef2ff;
+    animation: fadeAll 1s ease-in-out;
+}
+
+/* Full Page Fade */
+@keyframes fadeAll{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+/* Navbar */
+nav{
+    background:#1e3a8a;
+    color:white;
+    padding:15px 5%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:100;
+    box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
+nav h2{
+    font-size:22px;
+    font-weight:bold;
+}
+
+nav a{
+    color:white;
+    margin-left:20px;
+    text-decoration:none;
+    font-size:15px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#c7d2fe;
+}
+
+/* Hero Section */
+.hero{
+    text-align:center;
+    padding:80px 20px;
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+               url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200") center/cover;
+    color:white;
+    animation: heroFade 1.2s ease-in-out;
+}
+
+@keyframes heroFade{
+    from{opacity:0; transform:translateY(40px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+.hero h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+/* Section Title */
+.section-title{
+    text-align:center;
+    font-size:32px;
+    margin:40px 0 20px;
+    animation: fadeUp 1s ease-in-out;
+}
+
+@keyframes fadeUp{
+    from{opacity:0; transform:translateY(30px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* Cards */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+    padding:0 8% 40px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    transition:0.3s;
+    animation: fadeUp 1.4s ease-in-out;
+}
+
+.card:hover{
+    transform:translateY(-6px) scale(1.03);
+    box-shadow:0 8px 20px rgba(0,0,0,0.25);
+}
+
+.card h3{
+    color:#1e3a8a;
+    margin-bottom:8px;
+}
+
+/* Features Section */
+.features{
+    background:white;
+    padding:40px 8%;
+    margin:40px auto;
+    border-radius:10px;
+    animation: fadeUp 1.4s ease-in-out;
+}
+
+.features ul{
+    margin-top:15px;
+    padding-left:20px;
+    line-height:1.7;
+}
+
+/* AI Workflow */
+.workflow{
+    padding:40px 8%;
+    background:#dbeafe;
+    border-radius:10px;
+    margin:40px auto;
+    animation: fadeUp 1.4s ease-in-out;
+}
+
+.workflow-step{
+    background:white;
+    margin:10px 0;
+    padding:15px;
+    border-radius:8px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.workflow-step:hover{
+    transform:scale(1.03);
+}
+
+/* FAQ */
+.faq{
+    padding:40px 8%;
+    animation: fadeUp 1.4s ease-in-out;
+}
+
+.faq h3{
+    font-size:20px;
+    margin:10px 0;
+}
+
+/* Footer */
+footer{
+    background:#1e3a8a;
+    color:white;
+    padding:15px;
+    margin-top:40px;
+    text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav>
+    <h2>Generative AI</h2>
+    <div>
+        <a href="#models">Models</a>
+        <a href="#features">Features</a>
+        <a href="#faq">FAQ</a>
+        <a href="#">Contact</a>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+    <h1>Popular Generative AI Models</h1>
+    <p>Designed by a Student — Clean, Simple, Attractive & Animated!</p>
+</section>
+
+<!-- Models Section -->
+<h2 class="section-title" id="models">Top AI Models</h2>
+
+<div class="cards">
+    <div class="card">
+        <h3>  <a href="gpt-4.html">GPT-4</a></h3>
+        <p>Advanced text model by OpenAI.</p>
+    </div>
+
+    <div class="card">
+        <h3>  <a href="claude 3.html">Claude 3</a></h3>
+        <p>Helpful conversational AI by Anthropic.</p>
+    </div>
+
+    <div class="card">
+        <h3> <a href="Llama 3.html">Llama 3</a></h3>
+        <p>Open-source AI model by Meta.</p>
+    </div>
+
+    <div class="card">
+        <h3> <a href="Midjourney.html">Midjourney</a></h3>
+        <p>Powerful image-generation model.</p>
+    </div>
+
+    <div class="card">
+        <h3> <a href="Stable diffusion.html">Stable Diffusion</a></h3>
+        <p>Realistic open-source image generator.</p>
+    </div>
+</div>
+
+<!-- Features Section -->
+<div class="features" id="features">
+    <h2>What Can Generative AI Do?</h2>
+
+    <ul>
+        <li>Create images from text</li>
+        <li>Write essays, blogs, emails</li>
+        <li>Generate music & sound effects</li>
+        <li>Create 3D models & animations</li>
+        <li>Build websites & code</li>
+        <li>Translate languages instantly</li>
+        <li>Make videos using text prompts</li>
+    </ul>
+</div>
+
+<!-- Workflow -->
+<div class="workflow">
+    <h2>How Does Generative AI Work?</h2>
+
+    <div class="workflow-step">Step 1: Input a text prompt</div>
+    <div class="workflow-step">Step 2: AI processes and understands it</div>
+    <div class="workflow-step">Step 3: AI generates text, image, music, or code</div>
+    <div class="workflow-step">Step 4: Output is shown to the user</div>
+</div>
+
+<!-- FAQ -->
+<div class="faq" id="faq">
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>1. Is Generative AI easy to use?</h3>
+    <p>Yes! Even students can use it easily.</p>
+
+    <h3>2. Is it free?</h3>
+    <p>Many AI tools are free with basic features.</p>
+
+    <h3>3. Can AI help in studies?</h3>
+    <p>Yes, AI can help in notes, projects, coding, presentations and much more.</p>
+</div>
+
+<!-- Footer -->
+<footer>
+    © 2025 Design By Vineet | Generative AI Website
+</footer>
+
+</body>
+</html>
