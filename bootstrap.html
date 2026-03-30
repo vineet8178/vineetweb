@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ProStore Advanced</title>
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+body
+ {
+  font-family: 'Poppins', sans-serif; 
+  }
+.hero 
+{ background: url('https://images.unsplash.com/photo-1523275335684-37898b6baf30');
+ background-size: cover; 
+ background-position: center; 
+ height: 95vh; 
+ color: white; 
+ display:flex; 
+ align-items:center; }
+.hero h1 
+{ 
+font-size: 3.5rem;
+ font-weight: bold;
+  }
+.btn-custom {
+ border-radius: 30px; 
+ padding: 10px 25px; 
+ }
+.card:hover
+ { 
+ transform: translateY(-10px);
+  transition: 0.3s; 
+  }
+.card img 
+{ 
+height:200px;
+ object-fit:cover;
+  }
+footer 
+{
+ background:#111; 
+color:white;
+ }
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">ProStore</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="#offers">Offers</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <h1>Super Sale 2026 🔥</h1>
+    <p class="mb-4">Grab best deals before they are gone!</p>
+    <a href="#products" class="btn btn-warning btn-lg btn-custom me-2">Shop Now</a>
+    <a href="#offers" class="btn btn-outline-light btn-lg btn-custom">View Offers</a>
+  </div>
+</section>
+
+<!-- Offers Section -->
+<section id="offers" class="py-5 bg-light">
+<div class="container">
+<h2 class="text-center mb-5">Special Offers</h2>
+<div class="row g-4">
+
+<div class="col-md-4">
+<div class="card text-center p-4">
+<img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9" class="img-fluid mb-3">
+<h5>50% OFF</h5>
+<p>On Electronics</p>
+<button class="btn btn-danger btn-custom">Grab Deal</button>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card text-center p-4">
+<img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b" class="img-fluid mb-3">
+<h5>Buy 1 Get 1</h5>
+<p>On Fashion</p>
+<button class="btn btn-success btn-custom">Shop Now</button>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card text-center p-4">
+<img src="https://images.unsplash.com/photo-1556745757-8d76bdb6984b" class="img-fluid mb-3">
+<h5>Free Delivery</h5>
+<p>On Orders Above $50</p>
+<button class="btn btn-primary btn-custom">Order Now</button>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- Products -->
+<section id="products" class="py-5">
+<div class="container">
+<h2 class="text-center mb-5">Trending Products</h2>
+<div class="row g-4">
+
+<!-- 12 PRODUCTS -->
+
+<div class="col-md-3">
+<div class="card">
+<img src="images/headphones.png" class="card-img-top">
+<div class="card-body text-center">
+<h6>Headphones</h6>
+<p>999</p>
+<a href="bootstrap1.html" class="btn btn-dark w-100 btn-custom">Add to Cart</a>
+</div>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="card">
+<img src="images/smart watch.jpg" class="card-img-top">
+<div class="card-body text-center">
+<h6>Smart Watch</h6>
+<p>1200</p>
+<a href="bootstrap2.html" class="btn btn-dark w-100 btn-custom">Add to Cart</a>
+</div>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="card">
+<img src="images/shoes 1.jpg" class="card-img-top">
+<div class="card-body text-center">
+<h6>Shoes</h6>
+<p>1390</p>
+<button class="btn btn-dark w-100 btn-custom">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="card">
+<img src="images/backpack.jpg" class="card-img-top">
+<div class="card-body text-center">
+<h6>Backpack</h6>
+<p>659</p>
+<button class="btn btn-dark w-100 btn-custom">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="card">
+<img src="images/camera.jpg" class="card-img-top">
+<div class="card-body text-center">
+<h6>Camera</h6>
+<p>25500</p>
+<button class="btn btn-dark w-100 btn-custom">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="card">
+<img src="images/gaming mouse.jpg" class="card-img-top">
+<div class="card-body text-center">
+<h6>Gaming Mouse</h6>
+<p>359</p>
+<button class="btn btn-dark w-100 btn-custom">Add to Cart</button>
+</div>
+</div>
+</div>
+
+
+<div class="col-md-3">
+<div class="card">
+<img src="images/laptop.jpg" class="card-img-top">
+<div class="card-body text-center">
+<h6>Laptop</h6>
+<p>99000</p>
+<button class="btn btn-dark w-100 btn-custom">Add to Cart</button>
+</div>
+</div>
+</div>
+
+
+<div class="col-md-3">
+<div class="card">
+<img src="images/keyboard.jpg"class="card-img-top">
+<div class="card-body text-center">
+<h6>Keyboard</h6>
+<p>769</p>
+<button class="btn btn-dark w-100 btn-custom">Add to Cart</button>
+</div>
+</div>
+</div>
+
+
+<div class="col-md-3">
+<div class="card">
+<img src="images/speaker.jpg" class="card-img-top">
+<div class="card-body text-center">
+<h6>Speaker</h6>
+<p>5000</p>
+<button class="btn btn-dark w-100 btn-custom">Add to Cart</button>
+</div>
+</div>
+</div>
+
+
+<div class="col-md-3">
+<div class="card">
+<img src="images/tablet.jpg" class="card-img-top">
+<div class="card-body text-center">
+<h6>Tablet</h6>
+<p>25000</p>
+<button class="btn btn-dark w-100 btn-custom">Add to Cart</button>
+</div>
+</div>
+</div>
+
+
+<div class="col-md-3">
+<div class="card">
+<img src="images/sunglasses.jpg" class="card-img-top">
+<div class="card-body text-center">
+<h6>Sunglasses</h6>
+<p>690</p>
+<button class="btn btn-dark w-100 btn-custom">Add to Cart</button>
+</div>
+</div>
+</div>
+
+
+<div class="col-md-3">
+<div class="card">
+<img src="images/jacket.jpg" class="card-img-top">
+<div class="card-body text-center">
+<h6>Jacket</h6>
+<p>1500</p>
+<button class="btn btn-dark w-100 btn-custom">Add to Cart</button>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- Newsletter -->
+<section class="py-5 bg-dark text-white text-center">
+<div class="container">
+<h3>Subscribe for Updates</h3>
+<input type="email" placeholder="Enter Email" class="form-control w-50 mx-auto my-3">
+<button class="btn btn-warning btn-custom">Subscribe</button>
+</div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="py-5">
+<div class="container">
+<h2 class="text-center mb-4">Contact Us</h2>
+<div class="row">
+<div class="col-md-6">
+<input class="form-control mb-3" placeholder="Name">
+<input class="form-control mb-3" placeholder="Email">
+<textarea class="form-control mb-3" placeholder="Message"></textarea>
+<button class="btn btn-primary w-100 btn-custom">Send Message</button>
+</div>
+<div class="col-md-6">
+<h5>Our Store</h5>
+<p>Delhi, India</p>
+<p>Email: support@prostore.com</p>
+<p>Phone: 9999999999</p>
+<button class="btn btn-success btn-custom mt-2">Call Now</button>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Extra Section: Featured Banner -->
+<section class="py-5 bg-warning text-center">
+<div class="container">
+<h2>Big Festival Sale 🎉</h2>
+<p>Extra 30% off on selected items</p>
+<button class="btn btn-dark btn-custom">Explore Deals</button>
+</div>
+</section>
+
+<!-- Testimonials -->
+<section class="py-5 bg-light">
+<div class="container">
+<h2 class="text-center mb-5">What Our Customers Say</h2>
+<div class="row g-4">
+<div class="col-md-4"><div class="card p-3 text-center"><p>"Amazing products and fast delivery!"</p><h6>- Rahul</h6></div></div>
+<div class="col-md-4"><div class="card p-3 text-center"><p>"Best shopping experience ever."</p><h6>- Priya</h6></div></div>
+<div class="col-md-4"><div class="card p-3 text-center"><p>"Great quality at low price."</p><h6>- Aman</h6></div></div>
+</div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section class="py-5">
+<div class="container">
+<h2 class="text-center mb-4">FAQs</h2>
+<div class="accordion" id="faq">
+<div class="accordion-item">
+<h2 class="accordion-header">
+<button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#q1">How to order?</button>
+</h2>
+<div id="q1" class="accordion-collapse collapse show"><div class="accordion-body">Simply click on Add to Cart and proceed.</div></div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header">
+<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q2">Payment methods?</button>
+</h2>
+<div id="q2" class="accordion-collapse collapse"><div class="accordion-body">We accept all major payment options.</div></div>
+</div>
+</div>
+</div>
+</section>
+
+<footer class="py-4 text-center">
+<p>© 2026 ProStore |</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
