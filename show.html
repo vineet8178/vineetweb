@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fixed Show Hide</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #0f172a;
+            font-family: Arial;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            color: white;
+            background: linear-gradient(45deg, #3b82f6, #06b6d4);
+            cursor: pointer;
+        }
+
+        /* FIX: box ki height fix */
+        .box-wrapper {
+            height: 170px; /* same space hamesha rahega */
+            margin-top: 20px;
+        }
+
+        #box {
+            width: 300px;
+            height: 150px;
+            background: white;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="btn-group">
+        <button id="showBtn">Show</button>
+        <button id="hideBtn">Hide</button>
+    </div>
+
+    <!-- wrapper fix karega space -->
+    <div class="box-wrapper">
+        <div id="box">This box will hide and show <br>
+            if you click the button</div>
+    </div>
+
+</div>
+
+<script>
+    $(document).ready(function(){
+        $("#hideBtn").click(function(){
+            $("#box").fadeOut();
+        });
+
+        $("#showBtn").click(function(){
+            $("#box").fadeIn();
+        });
+    });
+</script>
+
+</body>
+</html>
