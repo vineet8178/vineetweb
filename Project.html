@@ -26,9 +26,42 @@ h1{
   color:#b0a36e;
 }
 
+nav{
+  width:85%;
+  margin:30px auto;
+}
+
+nav ul{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  list-style:none;
+}
+
+nav a{
+  color:var(--text);
+  text-decoration:none;
+  position:relative;
+}
+
+nav a::after{
+  content:'';
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  width:0;
+  height:2px;
+  background:var(--gold);
+  transition:0.3s;
+}
+
+nav a:hover::after{
+  width:100%;
+}
+
 .container{
   display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap:25px;
 }
 
@@ -53,7 +86,7 @@ h1{
 
 /* Content Section */
 .card-content{
-  padding:20px;
+  padding:30px;
 }
 
 .card-content h2{
@@ -94,13 +127,25 @@ footer{
 <body>
 
 <h1>My Projects</h1>
+<br>
+
+<nav>
+  <ul>
+    <li><a href="home.html">Home</a></li>
+    <li><a href="vineet.html">Introduction</a></li>
+    <li><a href="practice.html">My Practice</a></li>
+    <li><a href="Banner.html">Banner</a></li>
+  </ul>
+</nav>
+<br>
+<br>
 
 <div class="container">
 
   <div class="card">
     <div class="card-content">
       <h2>Project 1</h2>
-        <img src="images/Digital india 2047.png">
+      <img src="images/Digital india 2047.png">
       <a href="project1.html" target="_blank" class="btn">Digital india</a>
     </div>
   </div>
@@ -116,8 +161,24 @@ footer{
   <div class="card">
     <div class="card-content">
       <h2>Project 3</h2>
-        <img src="images/animation principle.jpg">
+      <img src="images/animation principle.jpg">
       <a href="Project3.html" target="_blank" class="btn">Animation Principles</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-content">
+      <h2>Project 4</h2>
+      <img src="images/shoping.jpg">
+      <a href="bootstrap.html" target="_blank" class="btn">Shoping site</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-content">
+      <h2>Project 5</h2>
+      <img src="images/e-commerce.jpg">
+      <a href="shopingsite.html" target="_blank" class="btn">e-commerce</a>
     </div>
   </div>
 
