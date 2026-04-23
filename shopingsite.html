@@ -420,25 +420,31 @@ transform:translateY(0);
 
 <script>
 
-for(let i=1;i<=12;i++){
+let products = [
+{name:"Nike Shoes", price:999, img:"images/shoes.jpg"},
+{name:"Smart Watch", price:1500, img:"images/smart watch.jpg"},
+{name:"Headphones", price:1200, img:"images/premium headphones.jpg"},
+{name:"T-Shirt", price:850, img:"images/t-shirt.jpg"},
+{name:"Laptop Bag", price:899, img:"images/laptop bags.jpg"},
+{name:"Sunglasses", price:579, img:"images/sunglasses.jpg"},
+{name:"Bluetooth Speaker", price:1299, img:"images/speaker.jpg"},
+{name:"Sneakers", price:1999, img:"images/shoes 1.jpg"},
+{name:"Jacket", price:2499, img:"images/jacket.jpg"},
+{name:"Mobile Cover", price:299, img:"images/mobile cover.jpg"},
+{name:"Gaming Mouse", price:799, img:"images/gaming mouse.jpg"},
+{name:"Backpack", price:1499, img:"images/backpack.jpg"}
+];
 
+products.forEach(p => {
 document.write(`
-
 <div class="card">
-
-<img src="https://picsum.photos/300/200?random=${i}">
-
-<h3>Product ${i}</h3>
-
-<p class="price">$${30+i}</p>
-
+<img src="${p.img}">
+<h3>${p.name}</h3>
+<p class="price">${p.price}</p>
 <button onclick="addCart()">Add to Cart</button>
-
 </div>
-
 `)
-
-}
+});
 let heroImages=[
 "https://picsum.photos/1600/900?1",
 "https://picsum.photos/1600/900?2",
